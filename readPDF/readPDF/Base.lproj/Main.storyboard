@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="readPDF" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGI-Ys-jlW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="89.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NCTB-Books" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hwt-KA-LiX">
+                                        <rect key="frame" x="131.5" y="30" width="151.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Hwt-KA-LiX" firstAttribute="centerY" secondItem="JGI-Ys-jlW" secondAttribute="centerY" id="jFO-ss-PWf"/>
+                                    <constraint firstItem="Hwt-KA-LiX" firstAttribute="centerX" secondItem="JGI-Ys-jlW" secondAttribute="centerX" id="thu-JX-8Wl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcm-kf-W4m" customClass="pdfView">
+                                <rect key="frame" x="0.0" y="141.5" width="414" height="806.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dcm-kf-W4m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5EH-h1-oTr"/>
+                            <constraint firstItem="JGI-Ys-jlW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="8Mh-h3-WTG"/>
+                            <constraint firstItem="dcm-kf-W4m" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="AyN-eb-6qx"/>
+                            <constraint firstItem="dcm-kf-W4m" firstAttribute="top" secondItem="JGI-Ys-jlW" secondAttribute="bottom" constant="8" symbolic="YES" id="Jgy-26-aGb"/>
+                            <constraint firstItem="JGI-Ys-jlW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="Lga-L2-mZy"/>
+                            <constraint firstItem="dcm-kf-W4m" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.9" id="PCv-JY-wDi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JGI-Ys-jlW" secondAttribute="trailing" id="aTh-BB-kPG"/>
+                            <constraint firstItem="JGI-Ys-jlW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aoJ-uo-rqd"/>
+                            <constraint firstItem="JGI-Ys-jlW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gvA-KT-7KT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dcm-kf-W4m" secondAttribute="trailing" id="lt9-FR-kdl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pdfView" destination="dcm-kf-W4m" id="ZSH-ay-QfL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="94.419642857142847"/>
+        </scene>
+    </scenes>
+</document>
